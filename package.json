@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "NODE_ENV=development & webpack-dev-server --hot --inline",
     "clear": "rm -rf dist/* & rm -rf demo/dist/*",
+    "install": "npm run build",
     "build": "NODE_ENV=production & yarn build-library & yarn build-demo",
     "build-demo": "webpack -p",
     "build-library": "babel ./src --out-dir ./dist --ignore test.js & postcss 'src/styles.scss' -d dist --ext css & postcss 'src/theme/*.scss' -d 'dist/theme' --ext css",
